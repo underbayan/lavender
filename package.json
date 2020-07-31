@@ -18,7 +18,7 @@
 		}
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^9.1.1",
+		"@commitlint/cli": "^9.1.2",
 		"@commitlint/config-conventional": "^9.1.1",
 		"@semantic-release/changelog": "^5.0.1",
 		"@semantic-release/git": "^9.0.0",
@@ -37,7 +37,6 @@
 		"tslint": "~6.1.2",
 		"tslint-config-prettier": "1.18.0",
 		"tslint-microsoft-contrib": "~6.2.0",
-		"tsutils": "~3.17.1",
 		"typescript": "~3.9.7"
 	},
 	"resolutions": {
@@ -52,10 +51,10 @@
 	"scripts": {
 		"start": "DEPLOY_ENV=local nodemon --watch 'src/**/*' -e ts --exec ts-node --log-error --files ./src/main.ts",
 		"clean": "rimraf coverage build tmp",
-		"build:es": "rm -rf dist/es && tsc --module es2015 --outDir dist/es",
+		"build:es": "rimraf dist/es && tsc --module es2015 --outDir dist/es",
 		"build:umd": "rimraf dist && tsc --outDir dist/umd",
-		"build:cjs": "rm -rf dist/cjs && tsc --module commonjs --outDir dist/cjs",
-		"build": "rm -rf dist && tsc  --module commonjs --outDir dist",
+		"build:cjs": "rimraf dist/cjs && tsc --module commonjs --outDir dist/cjs",
+		"build": "rimraf dist && tsc  --module commonjs --outDir dist",
 		"build:watch": "tsc -w ",
 		"lint": "tslint -t stylish --project \"tsconfig.json\"",
 		"test": "jest --coverage",

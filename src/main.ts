@@ -21,6 +21,7 @@ function delayedHello(
 		setTimeout(() => resolve(`Hello, ${name}`), delay),
 	);
 }
+class A {}
 export default '95fen';
 // Below are examples of using TSLint errors suppression
 // Here it is suppressing missing type definitions for greeter function
