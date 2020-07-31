@@ -23,8 +23,6 @@ function delayedHello(
 }
 class A {}
 export default '95fen';
-// Below are examples of using TSLint errors suppression
-// Here it is suppressing missing type definitions for greeter function
 export async function greeter(name: string):Promise<string> {
 	return await delayedHello(name, Delays.Long);
 }
