@@ -1,3 +1,10 @@
+## [1.0.1](https://code.shihuo.cn/95fen-web-frontend/seed/ts-module-template/compare/v1.0.0...v1.0.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* remove some comments ([d418dc1](https://code.shihuo.cn/95fen-web-frontend/seed/ts-module-template/commit/d418dc1b918788619ff8ff50c3c33a2fba230f21))
+
 # 1.0.0 (2020-07-31)
 
 
