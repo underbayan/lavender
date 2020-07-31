@@ -1,6 +1,6 @@
 {
 	"name": "@fen95/ts-module-template",
-	"version": "1.0.0",
+	"version": "1.0.0-beta.1",
 	"description": "node module boilerplate",
 	"engines": {
 		"node": ">= 10.13 <13"
