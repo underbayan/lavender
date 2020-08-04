@@ -55,7 +55,6 @@
 		"build:watch": "tsc -w  --module commonjs --outDir dist",
 		"lint": " eslint ./src --ext .js,.jsx,.ts,.tsx",
 		"test": "jest --coverage",
-		"ddd": "prettier --write",
 		"test:watch": "jest --watch",
 		"publish": "HUSKY_SKIP_HOOKS=1 semantic-release --ci false"
 	},
