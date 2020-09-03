@@ -1,0 +1,48 @@
+stages:
+    - test
+    - build
+    - package
+    - deploy
+
+test_task:
+    retry: 1
+    stage: test
+    tags:
+        - nodejs-common
+    script:
+        - npm i && npm run test
+    coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+    artifacts:
+        paths:
+            - coverage
+    allow_failure: false
+
+package_task:
+    tags:
+        - nodejs-common
+    retry: 1
+    stage: package
+    script:
+        - echo "package"
+    artifacts:
+        paths:
+            - src/*
+    allow_failure: false
+
+deploy_task:
+    tags:
+        - nodejs-common
+    retry: 1
+    stage: deploy
+    script:
+        - echo "deploy"
+    allow_failure: false
+
+build_task:
+    tags:
+        - nodejs-common
+    retry: 1
+    stage: build
+    script:
+        - echo "build"
+    allow_failure: false
