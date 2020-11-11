@@ -1,1 +1,1 @@
-tiny boilerplate for node ts
+Tiny boilerplate for ts project
