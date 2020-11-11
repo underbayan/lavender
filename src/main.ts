@@ -1,3 +1,6 @@
+/* eslint-disable */
+import { CONST_DEMO } from './rawjs'
+/* eslint-enable */
 /**
  * Some predefined delays (in milliseconds).
  */
@@ -19,10 +22,11 @@ function delayedHello(
 ): Promise<string> {
 	return new Promise((resolve: (value?: string) => void) =>
 		setTimeout(() => resolve(`Hello, ${name}`), delay),
-	);
+	)
 }
-class A {}
-export default '95fen';
-export async function greeter(name: string):Promise<string> {
-	return await delayedHello(name, Delays.Long);
+export default '95fen'
+export async function greeter(name: string): Promise<string> {
+	return await delayedHello(name, Delays.Long)
 }
+export { CONST_DEMO }
+console.log('Run instance directly')
